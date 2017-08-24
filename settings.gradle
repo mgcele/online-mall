@@ -1,0 +1,3 @@
+rootProject.name = 'online-mall'
+
+include "online-mall-web"
