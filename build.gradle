@@ -39,7 +39,7 @@ project("online-mall-base") {
 
 project("online-mall-service") {
     dependencies {
-        compile(project("online-mall-base"))
+        compile(project(":online-mall-base"))
 
         compile("com.alibaba:fastjson:1.2.5")
         compile("org.apache.commons:commons-lang3:3.5")
@@ -55,7 +55,7 @@ project("online-mall-web") {
     }
 
     dependencies {
-        compile(project("online-mall-service"))
+        compile(project(":online-mall-service"))
 
         compile("org.springframework.boot:spring-boot-starter-web")
         compile("org.springframework.boot:spring-boot-starter-jetty")
