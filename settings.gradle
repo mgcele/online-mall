@@ -1,3 +1,5 @@
 rootProject.name = 'online-mall'
 
+include "online-mall-base"
+include "online-mall-service"
 include "online-mall-web"

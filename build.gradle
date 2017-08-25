@@ -8,45 +8,61 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'org.springframework.boot'
+configure(allprojects) {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
 
-//生成的jar包包名和版本
-jar {
-    baseName = 'online-mall'
-    version =  '1.0.0'
+    repositories {
+        mavenCentral()
+    }
+
+    //设置jdk的版本
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    configurations {
+        compile.exclude module:"spirng-boot-starter-tomcat"
+    }
+
+    //添加编译时的依赖
+    dependencies {
+        testCompile('org.springframework.boot:spring-boot-starter-test')
+    }
 }
 
-repositories {
-    mavenCentral()
+project("online-mall-base") {
+    dependencies {
+        compile("mysql:mysql-connector-java")
+        compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    }
 }
 
-//设置jdk的版本
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+project("online-mall-service") {
+    dependencies {
+        compile(project("online-mall-base"))
 
-
-configurations {
-    compile.exclude module:"spirng-boot-starter-tomcat"
+        compile("com.alibaba:fastjson:1.2.5")
+        compile("org.apache.commons:commons-lang3:3.5")
+    }
 }
 
-//添加编译时的依赖
-dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-jetty")
-    compile("org.springframework.boot:spring-boot-starter-data-jpa")
-    compile("mysql:mysql-connector-java")
-    compile("org.springframework.boot:spring-boot-starter-aop")
-    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-    compile("org.apache.commons:commons-lang3:3.5")
-    compile("com.alibaba:fastjson:1.2.5")
-    compile("io.springfox:springfox-swagger2:2.5.0")
-    compile("io.springfox:springfox-swagger-ui:2.5.0")
-    compile("com.github.wxpay:wxpay-sdk:0.0.3")
-    compile("org.apache.httpcomponents:httpclient:4.5.3")
+project("online-mall-web") {
 
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    //生成的jar包包名和版本
+    jar {
+        baseName = 'online-mall-web'
+        version =  '1.0.0'
+    }
 
+    dependencies {
+        compile(project("online-mall-service"))
+
+        compile("org.springframework.boot:spring-boot-starter-web")
+        compile("org.springframework.boot:spring-boot-starter-jetty")
+        compile("org.springframework.boot:spring-boot-starter-aop")
+        compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+        compile("io.springfox:springfox-swagger2:2.5.0")
+        compile("io.springfox:springfox-swagger-ui:2.5.0")
+        compile("org.apache.httpcomponents:httpclient:4.5.3")
+    }
 }
-
-//vvmaintain123
