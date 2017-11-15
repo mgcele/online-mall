@@ -8,6 +8,7 @@
     <!-- necessary css -->
     <link rel="stylesheet" href="${template.base}/static/css/bootstrap.min.css" />
     <link rel="stylesheet" href="${template.base}/static/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="${template.base}/static/css/online-mall.css" />
     <!-- necessary js -->
     <script src="${template.base}/static/js/plugins/jquery.min.js"></script>
     <script src="${template.base}/static/js/plugins/bootstrap.min.js"></script>

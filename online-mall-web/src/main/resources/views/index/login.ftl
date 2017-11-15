@@ -3,7 +3,7 @@
 
 <@template.content>
 <!-- BEGIN PAGE CONTENT  -->
-<div ng-controller="loginController">
+<div class="online-mall-bg" ng-controller="loginController">
 <div ui-view></div>
 </div>
 <!-- END PAGE CONTENT-->
