@@ -1,6 +1,6 @@
 <#import "/template.ftl" as template>
 <@template.header title="登陆"></@template.header>
-
+<link rel="stylesheet" href="${template.base}/static/css/login/login.css" />
 <@template.content>
 <!-- BEGIN PAGE CONTENT  -->
 <div ng-controller="loginController">

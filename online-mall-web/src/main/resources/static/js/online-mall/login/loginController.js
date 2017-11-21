@@ -1,7 +1,7 @@
 OnlineMallApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state("index", {
         url : "/index",
-        templateUrl : templatePath + "test.html"
+        templateUrl : templatePath + "login/index.html"
     });
 
     $urlRouterProvider.otherwise('/index');
