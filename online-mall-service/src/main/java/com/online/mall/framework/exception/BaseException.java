@@ -1,10 +1,12 @@
-package com.online.mall.exception.base;
+package com.online.mall.framework.exception;
+
+import com.online.mall.framework.exception.base.AbstractBaseNestedException;
 
 /**
  * @author mgcele
  * @since 1.0.0
  */
-public class BaseException extends AbstractBaseNestedException{
+public class BaseException extends AbstractBaseNestedException {
     
     private static final long serialVersionUID = 1L;
     

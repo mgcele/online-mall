@@ -1,5 +1,9 @@
-package com.online.mall.exception.base;
+package com.online.mall.framework.exception.utils;
 
+import com.online.mall.framework.exception.base.Describable;
+import com.online.mall.framework.exception.base.Traceable;
+import com.online.mall.framework.exception.model.ConfigConstant;
+import com.online.mall.framework.exception.model.ExceptionInfo;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.PrintWriter;

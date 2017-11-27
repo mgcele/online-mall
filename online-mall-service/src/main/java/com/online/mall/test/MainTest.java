@@ -1,8 +1,8 @@
 package com.online.mall.test;
 
-import com.online.mall.exception.base.ConfigConstant;
-import com.online.mall.exception.base.SimpleSerialIdGenerator;
-import com.online.mall.exception.base.SystemProperty;
+import com.online.mall.framework.exception.model.ConfigConstant;
+import com.online.mall.framework.identifier.SimpleSerialIdGenerator;
+import com.online.mall.framework.exception.base.SystemProperty;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Calendar;

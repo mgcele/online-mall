@@ -1,4 +1,4 @@
-package com.online.mall.exception.base;
+package com.online.mall.framework.exception.model;
 
 /**
  * @author mgcele

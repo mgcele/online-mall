@@ -1,5 +1,8 @@
-package com.online.mall.exception.base;
+package com.online.mall.framework.exception.utils;
 
+import com.online.mall.framework.exception.base.SystemProperty;
+import com.online.mall.framework.exception.model.ConfigConstant;
+import com.online.mall.framework.identifier.SimpleSerialIdGenerator;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Calendar;

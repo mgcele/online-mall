@@ -1,4 +1,4 @@
-package com.online.mall.exception.base;
+package com.online.mall.framework.exception.base;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

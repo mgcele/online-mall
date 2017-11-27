@@ -1,4 +1,8 @@
-package com.online.mall.exception.base;
+package com.online.mall.framework.exception.base;
+
+import com.online.mall.framework.exception.model.ExceptionInfo;
+import com.online.mall.framework.exception.utils.CommonExceptionUtils;
+import com.online.mall.framework.exception.utils.ExceptionTraceIdGenerator;
 
 /**
  * @author mgcele

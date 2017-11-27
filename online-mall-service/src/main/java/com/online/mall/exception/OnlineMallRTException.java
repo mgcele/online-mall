@@ -1,12 +1,12 @@
 package com.online.mall.exception;
 
-import com.online.mall.exception.base.BaseRuntimeException;
+import com.online.mall.framework.exception.BaseRuntimeException;
 
 /**
  * @author mgcele
  * @since 1.0.0
  */
-public class OnlineMallRTException extends BaseRuntimeException{
+public class OnlineMallRTException extends BaseRuntimeException {
 
     public OnlineMallRTException(String msg){
         super("00000", msg);
