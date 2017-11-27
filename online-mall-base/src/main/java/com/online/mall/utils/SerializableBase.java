@@ -1,4 +1,4 @@
-package com.online.mall.util;
+package com.online.mall.utils;
 
 import java.io.Serializable;
 

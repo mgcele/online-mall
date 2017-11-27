@@ -1,4 +1,4 @@
-package com.online.mall.controller;
+package com.online.mall.controller.test;
 
 import com.online.mall.service.TestDemoService;
 import org.springframework.stereotype.Controller;

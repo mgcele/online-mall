@@ -6,7 +6,7 @@ import com.online.mall.utils.SerializableBase;
  * @author mgcele
  * @since 1.0.0
  */
-public class LoginResponse extends SerializableBase{
+public class RegisterResponse extends SerializableBase{
     
     private Long userId;
     

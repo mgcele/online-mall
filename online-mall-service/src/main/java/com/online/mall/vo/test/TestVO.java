@@ -1,4 +1,4 @@
-package com.online.mall.vo;
+package com.online.mall.vo.test;
 
 /**
  * @author mgcele

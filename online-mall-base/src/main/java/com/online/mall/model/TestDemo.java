@@ -1,6 +1,6 @@
 package com.online.mall.model;
 
-import com.online.mall.util.SerializableBase;
+import com.online.mall.utils.SerializableBase;
 import org.springframework.data.annotation.Id;
 
 /**

@@ -1,5 +1,6 @@
 package com.online.mall.service;
 
+import com.online.mall.enums.UserLoginNameType;
 import com.online.mall.model.User;
 
 /**
@@ -7,6 +8,6 @@ import com.online.mall.model.User;
  */
 public interface UserService {
     
-    User register();
+    User register(UserLoginNameType userLoginNameType, String userLoginName, String password, String verificationCode);
     
 }

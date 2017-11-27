@@ -5,16 +5,15 @@ import com.online.mall.utils.SerializableBase;
 
 /**
  * @author mgcele
+ * @since 1.0.0
  */
-public class RegisterRequest extends SerializableBase{
+public class LoginRequest extends SerializableBase{
     
     private UserLoginNameType userLoginNameType;
     
     private String userLoginName;
     
     private String password;
-    
-    private String verificationCode;
     
     public UserLoginNameType getUserLoginNameType() {
         return userLoginNameType;
@@ -38,13 +37,5 @@ public class RegisterRequest extends SerializableBase{
     
     public void setPassword(String password) {
         this.password = password;
-    }
-    
-    public String getVerificationCode() {
-        return verificationCode;
-    }
-    
-    public void setVerificationCode(String verificationCode) {
-        this.verificationCode = verificationCode;
     }
 }
