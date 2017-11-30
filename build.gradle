@@ -1,6 +1,6 @@
 buildscript {
     repositories {
-        mavenCentral()//依赖Maven仓库
+        mavenCentral(url: "http://maven.aliyun.com/nexus/content/groups/public/")
     }
     dependencies {
         //使用1.5.3.RELEASE版本的Spring框架
@@ -20,18 +20,31 @@ configure(allprojects) {
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
 
-    configurations {
-        compile.exclude module:"spirng-boot-starter-tomcat"
-    }
-
     //添加编译时的依赖
     dependencies {
+        compile('ch.qos.logback:logback-classic')
+
         testCompile('org.springframework.boot:spring-boot-starter-test')
     }
+
+    ext.alibabaFastjsonVersion = '1.2.5'
+
+}
+
+project("common-utils") {
+
+    dependencies {
+        compile("org.springframework:spring-core")
+        compile("com.alibaba:fastjson:${alibabaFastjsonVersion}")
+        compile("org.apache.commons:commons-lang3:3.5")
+    }
+
 }
 
 project("online-mall-base") {
     dependencies {
+        compile(project(":common-utils"))
+
         compile("org.springframework.boot:spring-boot-starter-data-mongodb")
         //compile("mysql:mysql-connector-java")
         //compile("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -42,17 +55,20 @@ project("online-mall-service") {
     dependencies {
         compile(project(":online-mall-base"))
 
-        compile("com.alibaba:fastjson:1.2.5")
-        compile("org.apache.commons:commons-lang3:3.5")
     }
 }
 
 project("online-mall-web") {
 
-    //生成的jar包包名和版本
+    apply plugin: 'org.springframework.boot'
+
     jar {
         baseName = 'online-mall-web'
         version =  '1.0.0'
+    }
+
+    configurations {
+        compile.exclude module:"spirng-boot-starter-tomcat"
     }
 
     dependencies {

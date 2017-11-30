@@ -1,6 +1,6 @@
 package com.online.mall.vo.login;
 
-import com.online.mall.utils.SerializableBase;
+import com.mgcele.framework.utils.serializable.SerializableBase;
 
 /**
  * @author mgcele

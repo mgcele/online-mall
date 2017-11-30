@@ -1,6 +1,6 @@
 package com.online.mall.model;
 
-import com.online.mall.utils.SerializableBase;
+import com.mgcele.framework.utils.serializable.SerializableBase;
 import org.springframework.data.annotation.Id;
 
 import java.util.Date;

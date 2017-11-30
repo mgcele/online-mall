@@ -1,6 +1,6 @@
 package com.online.mall.exception;
 
-import com.online.mall.framework.exception.BaseRuntimeException;
+import com.mgcele.framework.exception.BaseRuntimeException;
 
 /**
  * @author mgcele

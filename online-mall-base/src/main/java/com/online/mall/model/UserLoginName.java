@@ -1,7 +1,7 @@
 package com.online.mall.model;
 
 import com.online.mall.enums.UserLoginNameType;
-import com.online.mall.utils.SerializableBase;
+import com.mgcele.framework.utils.serializable.SerializableBase;
 
 import java.util.Date;
 
