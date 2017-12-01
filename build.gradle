@@ -12,6 +12,8 @@ configure(allprojects) {
     apply plugin: 'java'
     apply plugin: 'org.springframework.boot'
 
+//    apply plugin: 'kotlin'
+
     repositories {
         mavenCentral()
     }
@@ -28,6 +30,7 @@ configure(allprojects) {
     }
 
     ext.alibabaFastjsonVersion = '1.2.5'
+    ext.commonLang3Version = '3.5'
 
 }
 
@@ -36,7 +39,11 @@ project("common-utils") {
     dependencies {
         compile("org.springframework:spring-core")
         compile("com.alibaba:fastjson:${alibabaFastjsonVersion}")
-        compile("org.apache.commons:commons-lang3:3.5")
+        compile("org.apache.commons:commons-lang3:${commonLang3Version}")
+        compile("com.fasterxml.jackson.core:jackson-annotations")
+        compile("com.fasterxml.jackson.core:jackson-core")
+        compile("com.fasterxml.jackson.core:jackson-databind")
+
     }
 
 }
