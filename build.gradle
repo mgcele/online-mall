@@ -40,9 +40,10 @@ project("common-utils") {
         compile("org.springframework:spring-core")
         compile("com.alibaba:fastjson:${alibabaFastjsonVersion}")
         compile("org.apache.commons:commons-lang3:${commonLang3Version}")
-        compile("com.fasterxml.jackson.core:jackson-annotations")
-        compile("com.fasterxml.jackson.core:jackson-core")
-        compile("com.fasterxml.jackson.core:jackson-databind")
+//        compile("com.fasterxml.jackson.core:jackson-annotations")
+//        compile("com.fasterxml.jackson.core:jackson-core")
+//        compile("com.fasterxml.jackson.core:jackson-databind")
+        compile("org.springframework.boot:spring-boot-starter-web")
 
     }
 
@@ -81,7 +82,6 @@ project("online-mall-web") {
     dependencies {
         compile(project(":online-mall-service"))
 
-        compile("org.springframework.boot:spring-boot-starter-web")
         compile("org.springframework.boot:spring-boot-starter-jetty")
         compile("org.springframework.boot:spring-boot-starter-aop")
         compile("org.springframework.boot:spring-boot-starter-freemarker")
