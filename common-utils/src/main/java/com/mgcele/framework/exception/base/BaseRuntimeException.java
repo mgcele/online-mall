@@ -1,4 +1,4 @@
-package com.mgcele.framework.exception;
+package com.mgcele.framework.exception.base;
 
 import com.mgcele.framework.exception.base.AbstractBaseRuntimeNestedException;
 

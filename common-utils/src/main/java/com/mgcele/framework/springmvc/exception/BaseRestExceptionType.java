@@ -11,19 +11,28 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public enum BaseRestExceptionType implements ExceptionType{
     
     /** 请求参数错误 */
-    IN_VALIDATE_PARAMS("1000", "参数错误"),
+    IN_VALIDATE_PARAMS("10000", "参数错误"),
     
-    PARAM_ENUMS_NOT_FOUND("1001", "请求中的Enum参数[{}]未找到对应服务端实现", true),
+    PARAM_ENUMS_NOT_FOUND("10001", "请求中的Enum参数[{}]未找到对应服务端实现", true),
     
-    IN_VALIDATE_REST_PAGINATION_TYPE("1002", "不支持的RESTful分页类型"),
+    IN_VALIDATE_REST_PAGINATION_TYPE("10002", "不支持的RESTful分页类型"),
+    
+    /** 用户相关错误 */
+    USER_NOT_EXISTED_TYPE("20001", "用户不存在"),
+    
+    USER_LGOINNAME_EXISTED("20002", "登录名已存在"),
+    
+    PASSWORD_INCORRECT_TYPE("20003", "密码错误"),
+    
+    VERIFICATION_CODE_INCORRECT_TYPE("20004", "验证码错误"),
     
     /** 系统错误 */
     // 需要输入后端系统的代号
-    DUBBO_RPC_EXCEPTION("9997", "后端服务通讯错误[{}]", true),
+    DUBBO_RPC_EXCEPTION("99997", "后端服务通讯错误[{}]", true),
     
-    REST_NOT_AUTHORIZED("9998", "REST服务未授权"),
+    REST_NOT_AUTHORIZED("99998", "REST服务未授权"),
     
-    SYSTEM_ERROR("9999", "系统运行时错误");
+    SYSTEM_ERROR("99999", "系统运行时错误");
     
     private String code;
     private String msg;

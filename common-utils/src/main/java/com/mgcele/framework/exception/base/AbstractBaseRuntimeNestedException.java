@@ -19,7 +19,7 @@ public abstract class AbstractBaseRuntimeNestedException extends RuntimeExceptio
     private ExceptionInfo rootExceptionInfo;
     private final Long timestamp;
     
-    public AbstractBaseRuntimeNestedException(String code, String msg) {
+    AbstractBaseRuntimeNestedException(String code, String msg) {
         super(msg);
         this.cause = null;
         this.code = SystemProperty.getInstance().getSystemName() + code;
@@ -29,7 +29,7 @@ public abstract class AbstractBaseRuntimeNestedException extends RuntimeExceptio
         this.rootExceptionInfo = CommonExceptionUtils.extractExceptionInfo(this);
     }
     
-    public AbstractBaseRuntimeNestedException(String code, String msg, Throwable e) {
+    AbstractBaseRuntimeNestedException(String code, String msg, Throwable e) {
         super(msg);
         this.cause = e;
         this.code = SystemProperty.getInstance().getSystemName() + code;

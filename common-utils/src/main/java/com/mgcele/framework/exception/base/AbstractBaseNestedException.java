@@ -19,7 +19,7 @@ public abstract class AbstractBaseNestedException extends Exception implements D
     private ExceptionInfo rootExceptionInfo;
     private final Long timestamp;
     
-    public AbstractBaseNestedException(String code, String msg) {
+    AbstractBaseNestedException(String code, String msg) {
         super(msg);
         this.code = SystemProperty.getInstance().getSystemName() + code;
         this.timestamp = System.currentTimeMillis();
@@ -29,7 +29,7 @@ public abstract class AbstractBaseNestedException extends Exception implements D
         this.rootExceptionInfo = CommonExceptionUtils.extractExceptionInfo(this);
     }
     
-    public AbstractBaseNestedException(String code, String msg, Throwable e) {
+    AbstractBaseNestedException(String code, String msg, Throwable e) {
         super(msg);
         this.code = SystemProperty.getInstance().getSystemName() + code;
         this.cause = e;

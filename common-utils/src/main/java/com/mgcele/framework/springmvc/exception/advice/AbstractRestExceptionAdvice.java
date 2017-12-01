@@ -1,7 +1,8 @@
-package com.mgcele.framework.springmvc.exception;
+package com.mgcele.framework.springmvc.exception.advice;
 
-import com.mgcele.framework.exception.BaseException;
-import com.mgcele.framework.exception.BaseRuntimeException;
+import com.mgcele.framework.exception.base.BaseException;
+import com.mgcele.framework.exception.base.BaseRuntimeException;
+import com.mgcele.framework.springmvc.exception.BaseRestExceptionType;
 import com.mgcele.framework.springmvc.vo.JsonRestResponseVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

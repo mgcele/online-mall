@@ -1,8 +1,7 @@
 package com.online.mall.api.user;
 
-import com.mgcele.framework.exception.BaseException;
-import com.mgcele.framework.exception.BaseRuntimeException;
-import com.mgcele.framework.springmvc.vo.BaseRestResponse;
+import com.mgcele.framework.exception.base.BaseException;
+import com.mgcele.framework.exception.base.BaseRuntimeException;
 import com.online.mall.vo.login.LoginResponse;
 import com.online.mall.vo.login.RegisterRequest;
 import com.online.mall.vo.login.RegisterResponse;
