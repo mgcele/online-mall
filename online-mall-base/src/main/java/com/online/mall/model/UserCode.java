@@ -1,17 +1,23 @@
 package com.online.mall.model;
 
 import com.mgcele.framework.utils.serializable.SerializableBase;
+import org.springframework.data.annotation.Id;
+
+import java.util.Date;
 
 /**
  * @author mgcele
  */
 public class UserCode extends SerializableBase{
     
+    @Id
     private Long userCodeId;
     
     private String key;
     
     private String value;
+    
+    private Date createTime;
     
     public Long getUserCodeId() {
         return userCodeId;
@@ -35,5 +41,13 @@ public class UserCode extends SerializableBase{
     
     public void setValue(String value) {
         this.value = value;
+    }
+    
+    public Date getCreateTime() {
+        return createTime;
+    }
+    
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }

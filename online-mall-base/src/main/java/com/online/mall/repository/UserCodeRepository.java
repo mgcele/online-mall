@@ -7,4 +7,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @author mgcele
  */
 public interface UserCodeRepository extends MongoRepository<UserCode, Long>{
+    
+    UserCode findUserCodeByKey(String key);
+    
 }

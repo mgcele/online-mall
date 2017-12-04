@@ -7,11 +7,14 @@ import com.mgcele.framework.exception.base.BaseRuntimeException;
  * @since 1.0.0
  */
 public class CommonRestRuntimeException extends BaseRuntimeException{
-    public CommonRestRuntimeException(ExceptionType type) {
+    
+    private static final ExceptionType type = BaseRestExceptionType.SYSTEM_ERROR;
+    
+    public CommonRestRuntimeException() {
         super(type.getCode(), type.getMsg());
     }
     
-    public CommonRestRuntimeException(ExceptionType type, Throwable e) {
+    public CommonRestRuntimeException(Throwable e) {
         super(type.getCode(), type.getMsg(), e);
     }
 }

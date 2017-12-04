@@ -1,6 +1,7 @@
 package com.online.mall.model;
 
 import com.mgcele.framework.utils.serializable.SerializableBase;
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.data.annotation.Id;
 
 import java.util.Date;
@@ -13,6 +14,7 @@ public class User extends SerializableBase{
     @Id
     private Long userId;
     
+    @NotBlank
     private String password;
     
     private String userNickname;
@@ -23,8 +25,10 @@ public class User extends SerializableBase{
     
     private String certNo;
     
+    @NotBlank
     private Date createTime;
     
+    @NotBlank
     private Date updateTime;
     
     public Long getUserId() {

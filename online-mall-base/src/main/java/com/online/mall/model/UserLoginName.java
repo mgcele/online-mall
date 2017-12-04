@@ -2,6 +2,7 @@ package com.online.mall.model;
 
 import com.online.mall.enums.UserLoginNameType;
 import com.mgcele.framework.utils.serializable.SerializableBase;
+import org.springframework.data.annotation.Id;
 
 import java.util.Date;
 
@@ -10,6 +11,7 @@ import java.util.Date;
  */
 public class UserLoginName extends SerializableBase{
     
+    @Id
     private Long userLoginNameId;
     
     private Long userId;
