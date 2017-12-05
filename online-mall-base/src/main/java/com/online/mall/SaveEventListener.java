@@ -25,8 +25,11 @@ public class SaveEventListener extends AbstractMongoEventListener<Object>{
         if (event != null) {
             ReflectionUtils.doWithFields(event.getSource().getClass(), field -> {
                 ReflectionUtils.makeAccessible(field);
+                Object a = field.get(event.getSource());
                 if (field.isAnnotationPresent(Id.class)) {
-                    field.set(event.getSource(), netAddressIdWorker.generate());
+                    if (field.get(event.getSource()) == null) {
+                        field.set(event.getSource(), netAddressIdWorker.generate());
+                    }
                 }
             });
         }
