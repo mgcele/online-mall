@@ -11,4 +11,5 @@
 
 <@template.script>
     <script src="${template.base}/static/js/online-mall/login/loginController.js"></script>
+    <script src="${template.base}/static/js/online-mall/login/service/restApi.js"
 </@template.script>

@@ -26,9 +26,10 @@ public class VerificationCodeServiceImpl implements VerificationCodeService {
     @Override
     public void generate(UserLoginNameType userLoginNameType, String userLoginName) {
         UserCode userCode = userCodeRepository.findUserCodeByKey(getKey(userLoginNameType, userLoginName));
-        if (userCode == null) {
-            userCode = new UserCode();
+        if (userCode != null) {
+            userCodeRepository.delete(userCode);
         }
+        userCode = new UserCode();
         userCode.setKey(getKey(userLoginNameType, userLoginName));
         userCode.setValue(generateCode());
         userCode.setCreateTime(new Date());
@@ -47,7 +48,7 @@ public class VerificationCodeServiceImpl implements VerificationCodeService {
         if (!verificationCode.equals(userCode.getValue())) {
             throw new CommonRestException(BaseRestExceptionType.VERIFICATION_CODE_INCORRECT_TYPE);
         }
-        
+        userCodeRepository.delete(userCode);
     }
     
     private String getKey(UserLoginNameType userLoginNameType, String userLoginName) {

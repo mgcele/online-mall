@@ -3,6 +3,9 @@ package com.mgcele.framework.identifier;
 import com.mgcele.framework.utils.IPUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * 基于IP地址的ID生成器工作类，调用SnowflakeIDGenerater生成各类业务ID
@@ -10,6 +13,7 @@ import org.slf4j.LoggerFactory;
  * @author mgcele
  * @since 1.0.0
  */
+@Component("netAddressIdWorker")
 public class NetAddressIdWorker implements IdentifierGenerator<Long>, IdentifierAnalyzer<Long, SnowflakeIDElement> {
     
     private Logger logger = LoggerFactory.getLogger(NetAddressIdWorker.class);
@@ -32,6 +36,7 @@ public class NetAddressIdWorker implements IdentifierGenerator<Long>, Identifier
     }
     
     @Override
+    @Bean
     public Long generate() {
         return idGen.generate();
     }
