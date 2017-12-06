@@ -6,14 +6,14 @@
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-user">登录名</span>
                                 </span>
-                <input type="text" class="form-control" placeholder="登录名">
+                <input type="text" class="form-control" ng-model="registerModule.username" placeholder="登录名">
             </div>
             <div class="form-group input-group mg-t20">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-phone">验证码</span>
                                 </span>
                 <input type="text" class="form-control" placeholder="验证码">
-                <button class="btn btn-primary">获取验证码</button>
+                <button class="btn btn-primary" ng-click="obtainVerification()">获取验证码</button>
             </div>
             <div class="input-group mg-t20">
                                 <span class="input-group-addon">

@@ -1,9 +1,11 @@
-OnlineMallApp.factory("restApi", function ($resource) {
-    return $resource(basePath + "/:first", {}, {
+OnlineMallApp.factory('restApi', function ($resource) {
+    return $resource(basePath + '/user/:first/:second/:third',
+        {}, {
         getVC : {
             method : 'GET',
             params : {
-                'first' : 'VC'
+                'first' : 'vc',
+                'second' : '@second'
             },
             headers : {
                 'Content-Type' : 'application/json'

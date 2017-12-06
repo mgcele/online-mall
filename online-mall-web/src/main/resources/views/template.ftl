@@ -14,6 +14,7 @@
     <script src="${template.base}/static/js/plugins/angular.min.js"></script>
     <script src="${template.base}/static/js/plugins/angular-resource.min.js"></script>
     <script src="${template.base}/static/js/plugins/angular-ui-router.min.js"></script>
+    <script src="${template.base}/static/js/plugins/angular-sanitize.min.js"></script>
     <script src="${template.base}/static/js/plugins/ui-bootstrap-tpls.min.js"></script>
     <script src="${template.base}/static/js/app.js"></script>
 </head>
