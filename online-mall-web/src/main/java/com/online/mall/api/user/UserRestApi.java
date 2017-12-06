@@ -6,6 +6,7 @@ import com.mgcele.framework.springmvc.exception.CommonRestException;
 import com.online.mall.enums.UserLoginNameType;
 import com.online.mall.model.User;
 import com.online.mall.service.UserService;
+import com.online.mall.vo.login.LoginRequest;
 import com.online.mall.vo.login.LoginResponse;
 import com.online.mall.vo.login.RegisterRequest;
 import com.online.mall.vo.login.RegisterResponse;
@@ -44,8 +45,11 @@ public class UserRestApi {
     }
     
     @PostMapping("/login")
-    public LoginResponse login() {
-        return new LoginResponse();
+    public LoginResponse login(@RequestBody LoginRequest request) throws CommonRestException {
+        User user = userService.login(UserLoginNameType.EMAIL, request.getUserLoginName(), request.getPassword());
+        LoginResponse response = new LoginResponse();
+        response.setUserId(user.getUserId());
+        return response;
     }
     
 }

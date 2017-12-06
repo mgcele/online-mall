@@ -9,19 +9,10 @@ import com.mgcele.framework.utils.serializable.SerializableBase;
  */
 public class LoginRequest extends SerializableBase{
     
-    private UserLoginNameType userLoginNameType;
     
     private String userLoginName;
     
     private String password;
-    
-    public UserLoginNameType getUserLoginNameType() {
-        return userLoginNameType;
-    }
-    
-    public void setUserLoginNameType(UserLoginNameType userLoginNameType) {
-        this.userLoginNameType = userLoginNameType;
-    }
     
     public String getUserLoginName() {
         return userLoginName;
