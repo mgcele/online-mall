@@ -1,0 +1,13 @@
+  px2rem(@px) {
+    return: unit(@px / 100, rem);//根据实际情况换算
+  }
+
+  .wrap100 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height:px2rem(450);
+  }
