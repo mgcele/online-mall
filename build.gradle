@@ -6,6 +6,9 @@ buildscript {
         //使用1.5.3.RELEASE版本的Spring框架
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE")
     }
+    ext {
+        springCloudVersion = "Finchley.M9"
+    }
 }
 
 configure(allprojects) {
@@ -40,11 +43,7 @@ project("common-utils") {
         compile("org.springframework:spring-core")
         compile("com.alibaba:fastjson:${alibabaFastjsonVersion}")
         compile("org.apache.commons:commons-lang3:${commonLang3Version}")
-//        compile("com.fasterxml.jackson.core:jackson-annotations")
-//        compile("com.fasterxml.jackson.core:jackson-core")
-//        compile("com.fasterxml.jackson.core:jackson-databind")
         compile("org.springframework.boot:spring-boot-starter-web")
-
     }
 
 }

@@ -2,7 +2,7 @@ OnlineMallApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state("index", {
         url : "/index",
         templateUrl : templatePath + "login/index.html"
-    }).state("reister", {
+    }).state("register", {
         url : "/register",
         templateUrl : templatePath + "login/register.html"
     });
